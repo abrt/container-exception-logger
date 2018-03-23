@@ -11,14 +11,14 @@ SYNOPSIS
 
 DESCRIPTION
 -----------
-A tool designed to run inside of a container which is able to get its input
+A tool designed to run inside of a container which can get its input
 outside of the container.
 
 --no-tag::
-   do not add tag 'container-exception-logger' on the beginning of log message
+   do not add tag 'container-exception-logger' at the beginning of log message
 
 --tag TAG::
-   define your own tag which will be added on the beginning of log message
+   define your own tag which will be added at the beginning of log message
 
 Input format specification
 --------------------------
@@ -35,13 +35,13 @@ contain following elements:
    string - exception type - Python, Python3, Ruby, etc.
 
 'executable'::
-   string - executable which caused the problem
+   string - the executable which caused the problem
 
 'reason'::
-   string - reason of the problem
+   string - the reason for the problem
 
 'backtrace'::
-   string - backtrace of the problem
+   string - the backtrace of the problem
 
 'time'::
    int - seconds since 1970-01-01 00:00:00 UTC
