@@ -1,5 +1,5 @@
 Name: container-exception-logger
-Version: 1.0.0
+Version: 1.0.1
 Release: 1%{?dist}
 Summary: Logging from a container to a host
 
@@ -34,5 +34,8 @@ cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-excep
 %{_mandir}/man1/container-exception-logger.1.*
 
 %changelog
+* Fri Mar 23 2018 Unknown name 1.0.1-1
+- new package built with tito
+
 * Thu Mar 08 2018 Matej Habrnal <mhabrnal@redhat.com> 1.0.0-1
 - init
