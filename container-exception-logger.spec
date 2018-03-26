@@ -5,7 +5,10 @@ Summary: Logging from a container to a host
 
 License: GPLv2+
 URL: https://github.com/abrt/container-exception-logger
-Source0: https://github.com/abrt/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
+# source is created by:
+# git clone https://github.com/abrt/container-exception-logger
+# cd container-exception-logger; tito build --tgz
+Source0: %{name}-%{version}.tar.gz
 
 BuildRequires: gcc
 BuildRequires: asciidoc
@@ -32,6 +35,7 @@ cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-excep
 %files
 %attr(6755, root, root) %{_bindir}/container-exception-logger
 %{_mandir}/man1/container-exception-logger.1.*
+%license COPYING
 
 %changelog
 * Fri Mar 23 2018 Unknown name 1.0.1-1
