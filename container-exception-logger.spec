@@ -1,7 +1,7 @@
 %global _hardened_build 1
 
 Name: container-exception-logger
-Version: 1.0.1
+Version: 1.0.2
 Release: 1%{?dist}
 Summary: Logging from a container to a host
 
@@ -40,6 +40,10 @@ cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-excep
 %license COPYING
 
 %changelog
+* Mon Mar 26 2018 Matej Habrnal <mhabrnal@redhat.com> 1.0.2-1
+- Use _hardened_build macro (mhabrnal@redhat.com)
+- Add license (mhabrnal@redhat.com)
+
 * Fri Mar 23 2018 Unknown name 1.0.1-1
 - new package built with tito
 
