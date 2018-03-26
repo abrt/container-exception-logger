@@ -1,3 +1,5 @@
+%global _hardened_build 1
+
 Name: container-exception-logger
 Version: 1.0.1
 Release: 1%{?dist}
