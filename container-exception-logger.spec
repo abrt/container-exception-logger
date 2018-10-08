@@ -5,7 +5,7 @@ Version: 1.0.2
 Release: 1%{?dist}
 Summary: Logging from a container to a host
 
-License: GPLv2+
+License: GPLv3+
 URL: https://github.com/abrt/container-exception-logger
 # source is created by:
 # git clone https://github.com/abrt/container-exception-logger
