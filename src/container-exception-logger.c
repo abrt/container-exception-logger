@@ -60,25 +60,8 @@ int main(int argc, char *argv[])
     FILE *f = fopen(INIT_PROC_STDERR_FD_PATH, "w");
     if (f == NULL)
     {
-        perror("Failed to open '"INIT_PROC_STDERR_FD_PATH"' as root");
-
-        /* Try to open the 'INIT_PROC_STDERR_FD_PATH' as normal user because of
-           https://github.com/minishift/minishift/issues/2058
-        */
-        if (seteuid(getuid()) == 0)
-        {
-            f = fopen(INIT_PROC_STDERR_FD_PATH, "w");
-            if (f == NULL)
-            {
-                perror("Failed to open '"INIT_PROC_STDERR_FD_PATH"' as user");
-                return 2;
-            }
-        }
-        else
-        {
-            perror("Failed to setuid");
-            return 3;
-        }
+        perror("Failed to open '"INIT_PROC_STDERR_FD_PATH"'");
+        return 2;
     }
 
     setvbuf (f, NULL, _IONBF, 0);
@@ -99,7 +82,7 @@ int main(int argc, char *argv[])
         {
             perror("Failed to write to '"INIT_PROC_STDERR_FD_PATH"'");
             fclose(f);
-            return 4;
+            return 3;
         }
     }
     fclose(f);
