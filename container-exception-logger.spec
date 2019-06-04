@@ -35,7 +35,7 @@ mkdir -p %{buildroot}/%{_mandir}/man1
 cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-exception-logger.1
 
 %files
-%attr(6755, root, root) %{_bindir}/container-exception-logger
+%{_bindir}/container-exception-logger
 %{_mandir}/man1/container-exception-logger.1.*
 %license COPYING
 
