@@ -1,7 +1,7 @@
 %global _hardened_build 1
 
 Name: container-exception-logger
-Version: 1.0.2
+Version: 1.0.3
 Release: 1%{?dist}
 Summary: Logging from a container to a host
 
@@ -40,6 +40,11 @@ cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-excep
 %license COPYING
 
 %changelog
+* Wed Jun 05 2019 Martin Kutlak <mkutlak@redhat.com> 1.0.3-1
+- Use a correct command name in helper (mkutlak@redhat.com)
+- Drop the setuid wrapper (mkutlak@redhat.com)
+- license is actually GPLv3+ (msuchy@redhat.com)
+
 * Mon Mar 26 2018 Matej Habrnal <mhabrnal@redhat.com> 1.0.2-1
 - Use _hardened_build macro (mhabrnal@redhat.com)
 - Add license (mhabrnal@redhat.com)
