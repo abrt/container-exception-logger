@@ -24,7 +24,7 @@
 int main(int argc, char *argv[])
 {
     const char *program_usage_string =
-        "Usage: abrt-container-logger [--no-tag | --tag STRING | --help]"
+        "Usage: container-exception-logger [--no-tag | --tag STRING | --help]"
         "\n"
         "\nThe tool reads from standard input and writes to '"INIT_PROC_STDERR_FD_PATH"'";
 
