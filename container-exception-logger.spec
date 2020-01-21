@@ -24,7 +24,7 @@ a container which is able to get its input outside of the container.
 %setup -q
 
 %build
-gcc %{optflags} src/container-exception-logger.c -o src/container-exception-logger
+%{__cc} %{optflags} src/container-exception-logger.c -o src/container-exception-logger
 a2x -d manpage -f manpage man/container-exception-logger.1.asciidoc
 
 %install
@@ -40,6 +40,9 @@ cp man/container-exception-logger.1 %{buildroot}/%{_mandir}/man1/container-excep
 %license COPYING
 
 %changelog
+* Mon Jan 13 2020 Tom Stellard <tstellar@redhat.com> - 1.0.3-3
+- Use __cc macro instead of hard-coding gcc
+
 * Wed Jun 05 2019 Martin Kutlak <mkutlak@redhat.com> 1.0.3-1
 - Use a correct command name in helper (mkutlak@redhat.com)
 - Drop the setuid wrapper (mkutlak@redhat.com)
